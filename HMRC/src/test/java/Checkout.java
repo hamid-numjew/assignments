@@ -12,21 +12,15 @@ public class Checkout {
 
     @Test
     public void processCheckout(){
-
         List<Product> items = Arrays.asList(Product.APPLE, Product.ORANGE);
-
         double total = CheckoutProcessor.checkout(items);
-
         Assert.assertEquals(0.85, total, 0.001);
     }
 
     @Test
     public void processCheckoutWithOneAppleTwoOranges(){
-
         List<Product> items = Arrays.asList(Product.APPLE, Product.ORANGE, Product.ORANGE);
-
         double total = CheckoutProcessor.checkout(items);
-
         Assert.assertEquals(1.10, total, 0.001);
     }
 
@@ -37,8 +31,7 @@ public class Checkout {
                 Product.APPLE, Product.APPLE, Product.ORANGE, Product.ORANGE);
 
         double total = CheckoutProcessor.checkout(items);
-
-        //Assert.assertEquals(2.55, total, 0.001);
+        Assert.assertEquals(2.55, total, 0.001);
     }
 
     @Test
@@ -47,8 +40,6 @@ public class Checkout {
         List<Product> items = Arrays.asList(Product.APPLE, Product.APPLE, Product.APPLE, Product.ORANGE, Product.ORANGE);
 
         double total = CheckoutProcessor.checkout(items);
-
-        //Assert.assertEquals(1.70, total, 0.001);
-
+        Assert.assertEquals(1.70, total, 0.001);
     }
 }
