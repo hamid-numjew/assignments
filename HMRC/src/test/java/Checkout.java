@@ -19,4 +19,14 @@ public class Checkout {
 
         Assert.assertEquals(0.85, total, 0.001);
     }
+
+    @Test
+    public void processCheckoutWithOneAppleTwoOranges(){
+
+        List<Product> items = Arrays.asList(Product.APPLE, Product.ORANGE, Product.ORANGE);
+
+        double total = CheckoutProcessor.checkout(items);
+
+        Assert.assertEquals(1.10, total, 0.001);
+    }
 }
