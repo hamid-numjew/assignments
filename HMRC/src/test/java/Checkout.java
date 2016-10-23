@@ -1,15 +1,19 @@
 package test.java;
 
 import main.java.CheckoutProcessor;
+import main.java.Product;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Checkout {
 
     @Test
     public void processCheckout(){
 
-        String[] items = {"Apple","Orange"};
+        List<Product> items = Arrays.asList(Product.APPLE, Product.ORANGE);
 
         double total = CheckoutProcessor.checkout(items);
 
