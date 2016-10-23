@@ -1,5 +1,6 @@
 package test.java;
 
+import main.java.CheckoutProcessor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,8 +9,10 @@ public class Checkout {
     @Test
     public void processCheckout(){
 
-        System.out.print("Test failed.");
+        String[] items = {"Apple","Orange"};
 
-        //Assert.fail("Test failed.");
+        double total = CheckoutProcessor.checkout(items);
+
+        Assert.assertEquals(0.85, total, 0.001);
     }
 }
